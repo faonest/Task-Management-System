@@ -22,6 +22,8 @@
     {{-- Scripts --}}
     @include('layouts.foot')
 
+    @yield('toastr')
+
 </body>
 
 </html>

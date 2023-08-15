@@ -4,10 +4,16 @@
         <div class="main-content-inner">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 mt-4">
+                    <div class="col-12 mt-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Tasks</h4>
+
+                                <div class="row justify-content-between mb-4">
+                                    <h4 class="header-title">TASK LIST</h4>
+                                    <a href={{ route('addTask') }} class="btn btn-primary" type="submit">Add
+                                        Task</a>
+                                </div>
+
                                 <div class="table-responsive datatable-primary">
                                     <table id="dataTable2" class="text-center">
                                         <thead class="text-capitalize">
@@ -21,12 +27,16 @@
                                         <tbody>
                                             @foreach ($tasks as $item)
                                                 <tr>
-                                                    <td>{{ $item->title }}</td>
+                                                    <td style="max-width: 150px;">{{ $item->title }}
+                                                    </td>
                                                     <td>{{ $item->description }}</td>
                                                     <td>{{ $item->status }}</td>
                                                     <td>
-                                                        <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                        <i class="ti-trash btn btn-danger"></i>
+                                                        <a href="{{ route('editTask', ['id' => $item->id]) }}"
+                                                            class="ti-pencil mr-1 btn btn-success"></a>
+
+                                                        <a href="{{ route('deleteTask', ['id' => $item->id]) }}"
+                                                            class="ti-trash btn btn-danger"></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -40,4 +50,9 @@
             </div>
         </div>
     </div>
+
+@section('toastr')
+    @include('layouts.toastr')
+@endsection
+
 @endsection

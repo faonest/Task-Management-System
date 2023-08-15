@@ -5,3 +5,7 @@
 <script src="{{ asset('assets/assets/vendors/data-table/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('assets/assets/vendors/data-table/js/responsive.bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/assets/js/init/data-table.js') }}"></script>
+
+<!-- Toastr -->
+<script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('assets/toastr/toastr.min.js') }}"></script>

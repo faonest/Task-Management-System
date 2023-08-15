@@ -15,9 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $tasks = Task::all();
-    return view('dashboard')->with(['tasks' => $tasks]);
-})->name('dashboard');
+Route::get('/', [TaskController::class, 'dashboard'])->name('dashboard');
 
+// Fetch Tasks Api
 Route::get('fetchTasksFromApi', [TaskController::class, 'fetchTasksFromApi']);
+
+// Task Routes
+Route::get('add-task', [TaskController::class, 'addTask'])->name('addTask');
+Route::post('storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
+Route::get('edit-task/{id}', [TaskController::class, 'editTask'])->name('editTask');
+Route::post('updateTask', [TaskController::class, 'updateTask'])->name('updateTask');
+Route::get('deleteTask/{id}', [TaskController::class, 'deleteTask'])->name('deleteTask');

@@ -23,3 +23,6 @@
     href="{{ asset('assets/assets/vendors/data-table/css/responsive.bootstrap.min.css') }}">
 <link rel="stylesheet" type="text/css"
     href="{{ asset('assets/assets/vendors/data-table/css/responsive.jqueryui.min.css') }}">
+
+<!-- Toastr -->
+<link rel="stylesheet" href="{{ asset('assets/toastr/toastr.min.css') }}">
