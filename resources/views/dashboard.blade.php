@@ -19,105 +19,17 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Airi Satou</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Angelica Ramos</td>
-                                                <td>Chief Executive Officer (CEO)</td>
-                                                <td>London</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bradley Greer</td>
-                                                <td>Software Engineer</td>
-                                                <td>London</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brenden Wagner</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Caesar Vance</td>
-                                                <td>Pre-Sales Support</td>
-                                                <td>New York</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bruno Nash</td>
-                                                <td>Software Engineer</td>
-                                                <td>Edinburgh</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bradley Greer</td>
-                                                <td>Software Engineer</td>
-                                                <td>London</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brenden Wagner</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Caesar Vance</td>
-                                                <td>Pre-Sales Support</td>
-                                                <td>New York</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bruno Nash</td>
-                                                <td>Software Engineer</td>
-                                                <td>Edinburgh</td>
-                                                <td>
-                                                    <i class="ti-pencil mr-1 btn btn-success"></i>
-                                                    <i class="ti-trash btn btn-danger"></i>
-                                                </td>
-                                            </tr>
+                                            @foreach ($tasks as $item)
+                                                <tr>
+                                                    <td>{{ $item->title }}</td>
+                                                    <td>{{ $item->description }}</td>
+                                                    <td>{{ $item->status }}</td>
+                                                    <td>
+                                                        <i class="ti-pencil mr-1 btn btn-success"></i>
+                                                        <i class="ti-trash btn btn-danger"></i>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
