@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TaskController::class, 'dashboard'])->name('dashboard');
 
-// Fetch Tasks Api
-Route::get('fetchTasksFromApi', [TaskController::class, 'fetchTasksFromApi']);
-
 // Task Routes
 Route::get('add-task', [TaskController::class, 'addTask'])->name('addTask');
 Route::post('storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
